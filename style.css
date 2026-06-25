@@ -1,0 +1,254 @@
+body{
+    font: 15px/1.5 Arial, Helvetical,sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+.container{
+    width: 80%;
+    margin: auto ;
+    overflow: hidden;
+}
+ul{
+    margin: 0;
+    padding: 0; 
+}
+.button_1{
+    height: 35px;
+    background: rgb(232, 169, 9);
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color:  black;
+    border-radius: 15px;
+}
+header{
+    background: rgb(28, 120, 28);
+    color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    min-height: 70px;
+    border-bottom:  rgb(232, 169, 9) 4px solid;
+}
+header.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+header li{
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+header #brand h1{
+    margin: 0;
+}
+header nav{
+    margin-top: 10px;
+}
+header .brief,header .current a{
+    color:  rgb(232, 169, 9);
+    font-weight: bold;
+}
+header a:hover{
+    color: black;
+    font: bold;
+}
+#show{
+    min-height: 350px;
+    background: url('e.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #ffffff;
+}
+#show h1{
+    margin-top: 70px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+#show p{
+    font-size: 20px;
+}
+ul#services li{
+    /* style: none; */
+    padding: 15px; 
+    border: #cccccc solid 1px;
+    margin-bottom: 6px;
+    background: #e6e6e6;
+    text-align: center;
+    text-transform: lowercase;
+}
+article#main{
+    width: 100%;
+}
+#main h1{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#box{
+    margin-top: 20px;
+    border: none;
+    border-bottom: rgb(28, 120, 28) solid 2px; 
+    border-top: rgb(28, 120, 28) solid 2px;
+    box-shadow: inset;
+}
+#box ul, h4{
+    text-align: center;
+    text-transform: lowercase;
+}
+#box h1{
+   text-align: center;
+   text-transform: capitalize;
+}
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: rgb(28, 120, 28);
+    text-align: center;
+}
+#story h1, #goal h1{
+    text-align: center;
+    text-transform: capitalize;
+}
+#story p, #goal p{
+    text-transform: lowercase;
+}
+.span{
+   text-transform: uppercase; 
+}
+#go h1, p{
+   text-transform: capitalize;
+   text-align: center;
+}
+.light{
+    padding: 15px;
+    background: rgb(28, 120, 28);
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#side .quote input, #side .quote textarea{
+    width: 90%;
+    padding: 5px;
+}
+#story, #goal{
+    border: none;
+    border-bottom: rgb(28, 120, 28) 3px solid;
+    border-top: rgb(28, 120, 28) 3px solid;
+    margin: 10px;
+}
+#gallery{
+    padding: 20px 10px;
+    text-align: center;
+}
+#gallery h1{
+    margin-bottom: 30px;
+    color: black;
+    text-align: center;
+    text-transform: capitalize;
+}
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+.gallery-container img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    cursor: pointer;    
+}
+.gallery-container img:hover{
+    transform: scale(1.05);
+}
+.gallery-container img{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+
+/* ====================================
+    RESPONSIVE: TABLETS & LARGE PHONES
+   ==================================== */
+@media(max-width: 768px){
+    .container{
+        width: 90%;
+    }
+    header .container{
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav{
+        margin-top: 15px;
+    }
+    header nav ul{
+        justify-content: center;
+    }
+    header li{
+        padding: 0 12px;
+    }
+    #show{
+        min-height: 250px;
+        padding: 10px 0;
+    }
+    #show h1{
+        font-size: 36px;
+        margin-top: 30px;
+    }
+    #show p{
+        font-size: 17px;
+    }
+    article#main{
+        width: 100%;
+    }
+}
+
+/* ======================
+    RESPONSIVE: PHONES
+   ====================== */
+@media(max-width: 480){
+    .container{
+        width: 90%;
+    }
+    header li{
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+    header #brand h1{
+        font-size: 20px;
+    }
+    #show h1{
+        font-size: 26px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    #show p{
+        font-size: 15px;
+    }
+    ul#services li{
+        padding: 12px;
+    }
+    .gallery-container{
+        gap: 12px;
+    }
+    .gallery-container img{
+        height: 150px;
+    }
+    #side .quote input, #side .quote textarea{
+        width: 100%;
+    }
+}
+
